@@ -5,18 +5,18 @@ import java.util.Scanner;
 public class SecondPlusThird {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scr = new Scanner(System.in);
 
         ArrayList<Integer> numbers = new ArrayList<>();
         while (true) {
-            int number = Integer.valueOf(scanner.nextLine());
+            int number = Integer.valueOf(scr.nextLine());
             if (number == 0) {
                 break;
             }
-            
+
             numbers.add(number);
         }
 
-        System.out.println(luvut.get(0));
+        System.out.println(numbers.get(1) + numbers.get(2));
     }
 }
