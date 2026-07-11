@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Swap {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scr = new Scanner(System.in);
         int[] array = new int[5];
         array[0] = 1;
         array[1] = 3;
@@ -22,6 +22,12 @@ public class Swap {
         // Implement here
         // asking for the two indices
         // and then swapping them
+        System.out.print("Give two indices to swap:");
+        int indexA = Integer.valueOf(scr.nextLine());
+        int indexB = Integer.valueOf(scr.nextLine());
+        int valueB = array[indexB];
+        array[indexB] = array[indexA];
+        array[indexA] = valueB;
 
         System.out.println("");
         index = 0;
