@@ -16,7 +16,24 @@ public class SimpleCollection {
     }
 
     public ArrayList<String> getElements() {
-        return this.elements;
+        return (ArrayList) this.elements.clone();
     }
-    
+
+    @Override
+    public String toString() {
+        if (this.elements.isEmpty()) {
+            return "The collection " + this.name + " is empty.";
+        }
+        String strVar;
+        if (this.elements.size()==1) {
+            strVar = "The collection " + this.name + " has " + this.elements.size() + " element:";
+        } else {
+            strVar = "The collection " + this.name + " has " + this.elements.size() + " elements:";
+        }
+        for (String item : this.elements) {
+            strVar = strVar + "\n" + item;
+        }
+        return strVar;
+    }
+
 }
